@@ -1,0 +1,27 @@
+@import "colors";
+@import "variables";
+
+
+$btn-variants: primary, success, warning, danger;
+$btn-variantcolors: blue, green, rgba(252, 237, 112, 1), red;
+
+
+@each $btn-variant in $btn-variants {
+	$i: index($btn-variants, $btn-variant);
+
+	.btn_#{$btn-variant} {
+		background: nth($btn-variantcolors, $i);
+	}
+}
+
+.btn {
+	padding: 12px 16px;
+	border: 0;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 0.8em;
+	&:hover {
+		cursor: pointer;
+	}
+}
+

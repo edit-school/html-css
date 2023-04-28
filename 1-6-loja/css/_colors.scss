@@ -1,0 +1,12 @@
+
+$bg-variants: primary, secondary, primarydark, secondarydark;
+$bg-variantcolors: white, rgba(247, 238, 227, 1), black, rgba(81, 79, 77, 1);
+
+
+@each $bg-variant in $bg-variants {
+	$i: index($bg-variants, $bg-variant);
+
+	.bg_#{$bg-variant} {
+		background: nth($bg-variantcolors, $i);
+	}
+}

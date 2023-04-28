@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;   
+    margin: 0 auto;
+    width: clamp(400px, 100%, 1600px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    width: clamp(400px, 100%, 1600px);
+    padding: 15px 30px 30px;
+}
+
+.navbar__left{
+    float: left;
+}
+
+.navbar__center {
+    float: none;
+}
+
+.navbar__right {
+    float: right;
+}
+
+
+.navbar__link {
+    margin: 0 50px;
+    color: black;
+}
+
+.navbar__button {
+    background-color: rgb(255, 230, 0);
+    border: none;
+    padding:10px;
+    margin-left: 50px;
+}
+
+.splash {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 230, 0);
+    height: 450px;
+}
+
+.splash__text {
+    text-align: center;
+    padding: 20% 15% 15% 15%;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.description__column {
+    text-align: center;
+    margin: 20px;
+}
+
+.categories {
+    text-align: center;
+    font-size: medium;
+    margin: 30px auto 50px;
+}
+
+.searches_table {
+    display: flex;
+}
+
+.chip {
+    display: inline-block;
+    background-color: rgb(255, 230, 0);
+    border: none;
+    border-radius: 15px;
+    padding: 2px 10px;
+    margin: 10px;
+}
+
+.chip__label {
+    color: black;
+    font-size: medium;
+}
+
+.card {
+    background-color: rgb(206, 206, 206);
+    display: flex;
+}
+
+.card__info {
+    text-align: left;
+}
+
+.card__button {
+    background-color: rgb(157, 156, 156);
+    border: none;
+    border-radius: 15px;
+    padding: 2px 10px
+}
