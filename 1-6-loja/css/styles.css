@@ -62,8 +62,6 @@
   box-sizing: border-box;
   padding: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .row {
@@ -203,7 +201,7 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -236,13 +234,17 @@ small, .text_small {
 
 .thumbnail {
   overflow: hidden;
-  display: flex;
-  align-items: center;
 }
 .thumbnail img {
-  height: auto;
-  position: relative;
   width: 100%;
+  height: auto;
+}
+.thumbnail--category img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/1;
 }
 
 .navbar {
@@ -353,8 +355,9 @@ small, .text_small {
   }
 }
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 75px auto;
+  padding: 0 1em;
 }
 .container video {
   width: 100%;
@@ -391,12 +394,12 @@ small, .text_small {
 .info_screen {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 75px 0;
+  padding: 75px 20px;
 }
 .info_screen__item {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
 }
 .info_screen__item P {
@@ -448,6 +451,7 @@ small, .text_small {
   justify-content: flex-start;
   overflow-x: scroll;
   overflow-y: hidden;
+  gap: 1em;
 }
 .carousel img {
   max-height: 700px;
@@ -455,6 +459,19 @@ small, .text_small {
 }
 .carousel__image {
   max-height: 600px;
+}
+
+.category__description p {
+  max-width: 450px;
+}
+.category__products {
+  margin-bottom: 2em;
+}
+.category__footer {
+  justify-content: center;
+}
+.category__footer .btn a {
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
@@ -553,11 +570,23 @@ small, .text_small {
 .card {
   display: flex;
   align-items: center;
-  font-size: 16.8px;
+  font-size: 11.2px;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.card__header {
-  background: white;
+.card img {
+  width: 100%;
+  height: auto;
 }
-.card__header input {
-  color: pink;
+.card a {
+  color: black;
+}
+.card_label {
+  font-size: 1em;
+}
+.card_label h6 {
+  font-weight: bold;
+}
+.card span {
+  color: rgb(156, 156, 156);
 }/*# sourceMappingURL=styles.css.map */

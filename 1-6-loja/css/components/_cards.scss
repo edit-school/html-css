@@ -2,12 +2,22 @@
 
 .card {
 	@include flex(null, center);
-	@include fontSize(1.2);
-	&__header {
-		background: white;
-		input {
-			$bg: pink;
-			color: $bg;
-		}
+	@include fontSize(0.8);
+	flex-direction: column;
+	align-items: flex-start;
+	
+	img {
+		width: 100%;
+		height: auto;
 	}
+
+	a {color: black}
+
+  &_label {
+    h6 {
+			font-weight: bold}
+			font-size: 1em;
+    }
+    span {color: rgba(156, 156, 156, 1);
+		}
 }
