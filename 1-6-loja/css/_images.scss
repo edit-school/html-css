@@ -1,24 +1,12 @@
 
 .thumbnail {
-  overflow: clip;
-  &--hor {
-    height: 225px;
     overflow: hidden;
     display: flex;
     align-items: center;
 
-    img{
+    img {
+      height: auto;
       position: relative;
       width: 100%;
     }
-  }
-  &--ver {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    img{
-      position: relative;
-      width: 100%;
-    }
-  }
 }

@@ -21,11 +21,11 @@
 .menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10em;
 
   &__item {
     cursor: pointer;
     display: inline-block;
+    padding: 0 1em 0 6em;
 
     h6 {font-weight: bold;}
   }
@@ -39,6 +39,8 @@
   left : 0;
   padding: 1% 1.3em;
   margin: 0;
+
+  .row {justify-content: flex-start;}
 
   &__submenu {
     display: flex;
@@ -89,7 +91,7 @@
   100% {transform: scaleY(1)}
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
   .navbar {
 
     .menu {

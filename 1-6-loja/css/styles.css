@@ -235,24 +235,12 @@ small, .text_small {
 }
 
 .thumbnail {
-  overflow: clip;
-}
-.thumbnail--hor {
-  height: 225px;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
-.thumbnail--hor img {
-  position: relative;
-  width: 100%;
-}
-.thumbnail--ver {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-.thumbnail--ver img {
+.thumbnail img {
+  height: auto;
   position: relative;
   width: 100%;
 }
@@ -278,11 +266,11 @@ small, .text_small {
 .menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10em;
 }
 .menu__item {
   cursor: pointer;
   display: inline-block;
+  padding: 0 1em 0 6em;
 }
 .menu__item h6 {
   font-weight: bold;
@@ -296,6 +284,9 @@ small, .text_small {
   left: 0;
   padding: 1% 1.3em;
   margin: 0;
+}
+.dropdown .row {
+  justify-content: flex-start;
 }
 .dropdown__submenu {
   display: flex;
@@ -350,7 +341,7 @@ small, .text_small {
     transform: scaleY(1);
   }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
   .navbar .menu {
     display: none;
   }
@@ -365,15 +356,19 @@ small, .text_small {
   max-width: 1300px;
   margin: 75px auto;
 }
+.container video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2em;
+}
+.container h2 {
+  text-align: center;
+}
 .container--fluid {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.container--fluid video {
-  width: 100%;
-  margin-bottom: 2em;
 }
 
 .splash_screen {
@@ -530,6 +525,30 @@ small, .text_small {
   align-items: flex-end;
 }
 
+@media only screen and (max-width: 600px) {
+  .social_media {
+    justify-content: center;
+  }
+  .social_media .icons {
+    display: none;
+  }
+  .social_media .subscription {
+    width: 100%;
+    flex-direction: column;
+  }
+  .social_media .subscription span {
+    text-align: center;
+    margin: 4px 0;
+  }
+  .social_media .subscription button {
+    width: 100%;
+    border-radius: 4px;
+    margin: 4px 0;
+  }
+  .footer_menu {
+    padding-top: 10px;
+  }
+}
 .card {
   display: flex;
   align-items: center;
