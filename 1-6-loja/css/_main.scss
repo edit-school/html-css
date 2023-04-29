@@ -4,7 +4,7 @@
   margin: 75px auto;
 
   video {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 2em;
   }
@@ -59,12 +59,17 @@
 
 .product_screen {
   width: 100%;
+  min-height: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 
   img {
+    width: 100%;
+    min-width: 300px;
     align-self: flex-end;
     justify-self: flex-end;
+    position: relative;
   }
 
   &__info {
@@ -113,17 +118,10 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .product_screen {
-    img {
-      height: 400px;
-    }
-  }
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .product_screen__info {
     justify-content: flex-start;
     margin: 0;
   }
 }
+
