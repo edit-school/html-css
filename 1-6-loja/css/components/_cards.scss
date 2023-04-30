@@ -5,6 +5,7 @@
 	@include fontSize(0.8);
 	flex-direction: column;
 	align-items: flex-start;
+	overflow: hidden;
 	
 	img {
 		width: 100%;
@@ -13,6 +14,11 @@
 
 	a {color: black}
 
+	&_header {
+		position: relative;
+
+	}
+
   &_label {
     h6 {
 			font-weight: bold}
@@ -20,4 +26,16 @@
     }
     span {color: rgba(156, 156, 156, 1);
 		}
+}
+
+.product_card {
+  flex-direction: column;
+	justify-content: flex-start;
+	&__header {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	&__body {
+
+	}
 }

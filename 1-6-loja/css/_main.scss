@@ -1,7 +1,7 @@
 
 .container {
   max-width: 1200px;
-  margin: 75px auto;
+  margin: 4em auto;
   padding: 0 1em;
 
   video {
@@ -121,23 +121,34 @@
 }
 
 .category {
-  &__description {
-    p {
-      max-width: 450px;
-    }
+  
+  &__header__item {
+    justify-content: flex-start;
+    p {max-width: 450px;}
   }
+
   &__products {
     margin-bottom: 2em;
   }
 
   &__footer {
     justify-content: center;
-    .btn {a{color: black;}}
   }
   
 }
 
-@media only screen and (max-width: 600px) {
+.product {
+  &_collection {
+    justify-content: flex-start;
+  }
+  &_gallery {
+    width: 100%;
+    justify-content: space-between;
+    img {width: 100%;}
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .product_screen__info {
     justify-content: flex-start;
     margin: 0;
