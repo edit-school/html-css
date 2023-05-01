@@ -122,6 +122,10 @@
   border-radius: 100%;
 }
 
+.icon:focus {
+  border: 2px solid black;
+}
+
 [class*=col-] {
   box-sizing: border-box;
   padding: 8px;
@@ -282,6 +286,7 @@ h2 {
 }
 
 h3 {
+  margin: 0 0 0.2em;
   font-size: 2.369rem;
 }
 
@@ -297,6 +302,10 @@ small, .text_small {
   font-size: 0.75rem;
 }
 
+.text_smaller {
+  font-size: 0.9rem;
+}
+
 .thumbnail {
   overflow: hidden;
 }
@@ -304,12 +313,21 @@ small, .text_small {
   width: 100%;
   height: auto;
 }
+.thumbnail--category {
+  position: relative;
+}
 .thumbnail--category img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
   aspect-ratio: 2/1;
+}
+.thumbnail--category span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: black;
 }
 
 .rollover {
@@ -440,7 +458,7 @@ small, .text_small {
 }
 .container {
   max-width: 1200px;
-  margin: 4em auto;
+  margin: 0 auto 4em;
   padding: 0 1em;
 }
 .container video {
@@ -457,7 +475,34 @@ small, .text_small {
   flex-wrap: wrap;
   justify-content: center;
 }
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .container--flex {
+    flex-direction: column;
+  }
+}
+.container--column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container--column h6 {
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 auto 2em;
+  }
+}
+.container .screen_title {
+  margin: 4em 0 2em;
+}
 
+/***** Homepage *****/
 .splash_screen {
   position: relative;
   overflow: clip;
@@ -476,35 +521,36 @@ small, .text_small {
 }
 
 .info_screen {
-  max-width: 1300px;
+  display: flex;
   margin: 0 auto;
   padding: 75px 20px;
 }
 .info_screen__item {
   display: flex;
-  flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 24px;
+  gap: 10px;
 }
 .info_screen__item P {
   margin: 0;
+  min-width: 130px;
+  font-weight: bold;
+  padding: 0 8px;
 }
 
-.product_screen {
+.highlight_screen {
   width: 100%;
   min-height: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
 }
-.product_screen img {
+.highlight_screen img {
   width: 100%;
   min-width: 300px;
   align-self: flex-end;
-  justify-self: flex-end;
   position: relative;
 }
-.product_screen__info {
+.highlight_screen__info {
   width: 200px;
   padding: 1em 0 0 1em;
   display: flex;
@@ -512,39 +558,71 @@ small, .text_small {
   justify-content: center;
   align-items: flex-start;
 }
-.product_screen__info h5 {
+.highlight_screen__info h5 {
   font-style: italic;
   text-decoration: underline;
   margin-bottom: 2em;
   letter-spacing: 0.5em;
 }
-.product_screen__info p {
+.highlight_screen__info p {
   font-style: italic;
   margin-bottom: 2em;
 }
-.product_screen__info p span {
+.highlight_screen__info p span {
   font-weight: bold;
 }
-.product_screen__info a {
+.highlight_screen__info a {
   font-size: 0.8em;
   font-weight: bold;
 }
+@media only screen and (max-width: 768px) {
+  .highlight_screen__info .highlight_screen__info {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+  }
+}
 
 .carousel {
-  display: flex;
-  justify-content: flex-start;
+  flex-wrap: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
-  gap: 1em;
+  justify-content: flex-start;
 }
-.carousel img {
-  max-height: 700px;
-  max-width: 700px;
+.carousel_image {
+  width: calc(100% - 8px);
 }
-.carousel__image {
-  max-height: 600px;
+.carousel_image img {
+  width: 300px;
+  height: 300px;
 }
 
+@media screen and (max-width: 768px) {
+  .category_image {
+    width: calc(50% - 4px);
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+  .carousel_image {
+    width: calc(50% - 4px);
+  }
+  .carousel_image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .room_display_gallery {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+/***** Category Page *****/
 .category__header__item {
   justify-content: flex-start;
 }
@@ -558,23 +636,83 @@ small, .text_small {
   justify-content: center;
 }
 
-.product_collection {
-  justify-content: flex-start;
-}
-.product_gallery {
-  width: 100%;
+/***** Product Page *****/
+.product {
+  display: flex;
   justify-content: space-between;
 }
-.product_gallery img {
+.product img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.product h6 {
+  font-weight: bold;
+}
+.product__title {
+  justify-content: flex-start;
+}
+.product__gallery {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  position: relative;
+  padding-top: 60%;
+  gap: 1em;
+}
+.product__gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.product__gallery__thumb {
+  padding-top: 6px;
+  display: block;
+}
+.product__gallery__selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.product__gallery__selector:checked + .product__gallery__img {
+  opacity: 1;
+}
+.product__gallery__selector:checked ~ .product__gallery__thumb > img {
+  box-shadow: 0 0 0 3px #0be2f6;
+}
+
+.dimensions_screen img {
+  width: 100%;
+  height: auto;
+}
+.dimensions_screen__table {
+  width: 100%;
+  display: grid;
+  align-content: space-between;
+  color: gray;
+}
+.dimensions_screen__table__cell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: gray;
+}
+.dimensions_screen hr {
   width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .product_screen__info {
-    justify-content: flex-start;
-    margin: 0;
-  }
+.about_screen {
+  display: flex;
+  justify-content: flex-start;
 }
+
+.features_screen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .social_media {
   width: 100%;
   padding: 3em 2em;
@@ -693,10 +831,29 @@ small, .text_small {
 }
 
 .product_card {
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
-.product_card__header {
+.product_card__container {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+.product_card__container--column {
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+}
+.product_card__container--column .btn_warning {
+  align-self: flex-end;
+}
+.product_card .checkbox {
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+@media screen and (max-width: 1024px) {
+  .product_card {
+    width: calc(100% - 8px);
+  }
 }/*# sourceMappingURL=styles.css.map */

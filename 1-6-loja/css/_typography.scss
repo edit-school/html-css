@@ -29,12 +29,18 @@ h1 {
 
 h2 {
   margin: 0 0 0.2em;
-  font-size: 3.157rem;}
+  font-size: 3.157rem;
+}
 
-h3 {font-size: 2.369rem;}
+h3 {
+  margin: 0 0 0.2em;
+  font-size: 2.369rem;
+}
 
 h4 {font-size: 1.777rem;}
 
 h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
+
+.text_smaller {font-size: 0.90rem;}

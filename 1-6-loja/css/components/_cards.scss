@@ -29,13 +29,32 @@
 }
 
 .product_card {
-  flex-direction: column;
-	justify-content: flex-start;
-	&__header {
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-	&__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
+	&__container {
+		display: flex;
+		gap: 1em;
+		margin-bottom: 1.5em;
+
+		&--column {
+			display: flex;
+			flex-direction: column;
+
+			.btn_warning {
+				align-self: flex-end;
+			}
+		}
+	}
+
+	.checkbox {
+		display: flex;
+		align-items: center;
+		color: gray;
+	}
+
+	@media screen and (max-width:1024px) {
+		width: calc(100% - 8px);
 	}
 }

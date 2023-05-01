@@ -1,7 +1,7 @@
 
 .container {
   max-width: 1200px;
-  margin: 4em auto;
+  margin: 0 auto 4em;
   padding: 0 1em;
 
   video {
@@ -14,13 +14,43 @@
     text-align: center;
   }
 
-  &--fluid{
+  &--fluid {
     width: 100%;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
   }
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;      
+    }
+  }
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h6 {
+      font-weight: bold;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 2em;
+  }
+
+  .screen_title {
+    margin: 4em 0 2em;
+  }
 }
+
+/***** Homepage *****/
 
 .splash_screen {
   position: relative;
@@ -42,23 +72,25 @@
 }
 
 .info_screen {
-  max-width: 1300px;
+  display: flex;
   margin: 0 auto;
   padding: 75px 20px;
-  
+
   &__item {
     display: flex;
-    flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 24px;
+    gap: 10px;
     
     P {
       margin: 0;
-    }
+      min-width: 130px;
+      font-weight: bold;
+      padding: 0 8px;
+    }   
   }
 }
 
-.product_screen {
+.highlight_screen {
   width: 100%;
   min-height: 400px;
   display: grid;
@@ -69,7 +101,6 @@
     width: 100%;
     min-width: 300px;
     align-self: flex-end;
-    justify-self: flex-end;
     position: relative;
   }
 
@@ -80,6 +111,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    
     h5 {
       font-style: italic;
       text-decoration: underline;
@@ -100,25 +132,65 @@
       font-size: 0.8em;
       font-weight: bold;
     }
+
+    @media only screen and (max-width: 768px) {
+      .highlight_screen__info {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+      }
+    }
+
   }
 }
 
 .carousel {
-  display: flex;
-  justify-content: flex-start;
+  flex-wrap: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
-  gap: 1em;
-  
-  img {
-    max-height: 700px;
-    max-width: 700px;
-  }
+  justify-content: flex-start;
 
-  &__image {
-    max-height: 600px;
+  &_image {
+    width: calc(100% - 8px);
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .category_image {
+    width: calc(50% - 4px);
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+
+    &_image {
+      width: calc(50% - 4px);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .room_display_gallery {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+/***** Category Page *****/
 
 .category {
   
@@ -137,21 +209,99 @@
   
 }
 
+/***** Product Page *****/
+
 .product {
-  &_collection {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  h6 {font-weight: bold;}
+
+  &__title {
     justify-content: flex-start;
   }
-  &_gallery {
-    width: 100%;
-    justify-content: space-between;
-    img {width: 100%;}
+
+  &__gallery {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    position: relative;
+    padding-top: 60%;
+    gap: 1em;
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+     &__thumb {
+      padding-top: 6px;
+      display: block;
+    }
+    
+    &__selector {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      
+      &:checked {
+        + .product__gallery__img {
+          opacity: 1;
+        }
+        ~ .product__gallery__thumb > img {
+          box-shadow: 0 0 0 3px #0be2f6;;
+        }
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .product_screen__info {
-    justify-content: flex-start;
-    margin: 0;
+.dimensions_screen {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__table {
+    width: 100%;
+    display: grid;
+    align-content: space-between;
+    color: gray;
+    
+    &__cell {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      color: gray;
+    }
+  }
+
+  hr {
+    width: 100%;
   }
 }
+
+.about_screen {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.features_screen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
 

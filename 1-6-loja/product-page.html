@@ -22,31 +22,31 @@
             <div class="row dropdown__megamenu">
               <div class="col-lg-2 dropdown__submenu">
                 <h6>Shop by Category</h6>
-                <a>Sectionals</a>
-                <a>Sofas</a>
-                <a>Loveseats</a>
-                <a>Accent Chairs</a>
-                <a>Sleepers</a>
-                <a>Sleep Kits</a>
-                <a>Ottomans</a>
-                <a>Seating Accessories</a>
-                <a>All Seating</a>
+                <a href="category-page.html">Sectionals</a>
+                <a href="category-page.html">Sofas</a>
+                <a href="category-page.html">Loveseats</a>
+                <a href="category-page.html">Accent Chairs</a>
+                <a href="category-page.html">Sleepers</a>
+                <a href="category-page.html">Sleep Kits</a>
+                <a href="category-page.html">Ottomans</a>
+                <a href="category-page.html">Seating Accessories</a>
+                <a href="category-page.html">All Seating</a>
               </div>
               <div class="col-lg-2 dropdown__submenu">
                 <h6>Shop by Collection</h6>
-                <a>NOMAD Collection</a>
-                <a>Field Collection</a>
-                <a>Range Collection</a>
-                <a>Union Collection</a>
-                <a>NEW</a>
-                <a>Compare Collections</a>
+                <a href="category-page.html">NOMAD Collection</a>
+                <a href="category-page.html">Field Collection</a>
+                <a href="category-page.html">Range Collection</a>
+                <a href="category-page.html">Union Collection</a>
+                <a href="category-page.html">NEW</a>
+                <a href="category-page.html">Compare Collections</a>
               </div>
               <div class="col-lg-2 dropdown__submenu">
                 <h6>Shop by Upholstery</h6>
-                <a>Performance Fabric Seating</a>
-                <a>Italian Leather Seating</a>
-                <a>Performance Velvet Seating</a>
-                <a>All Seating</a>
+                <a href="category-page.html">Performance Fabric Seating</a>
+                <a href="category-page.html">Italian Leather Seating</a>
+                <a href="category-page.html">Performance Velvet Seating</a>
+                <a href="category-page.html">All Seating</a>
               </div>
             </div>
           </div>
@@ -105,49 +105,262 @@
 
   <main>
 
-    <div class="container">
-
-      <div class="row product_collection">
-        <div>
+    <section class="container">
+      <div class="row product">
+        <div class="col-lg-12 product__title">
           <h6>Nomad Collection</h6>
         </div>
-      </div>
-
-      <div class="row product_gallery">
         <div class="col-lg-8">
-          <div class="">
-              <img src="assets/products/1/product.webp" alt="">
+          <div class="product__gallery">
+            <div class="product__gallery__item">
+              <input type="radio" id="img-1" checked name="gallery" class="product__gallery__selector"/>
+              <img class="product__gallery__img" src="assets/products/1/product.webp" alt=""/>
+              <label for="img-1" class="product__gallery__thumb"><img src="assets/products/1/product.webp" alt=""/></label>
+            </div>
+            <div class="product__gallery__item">
+              <input type="radio" id="img-2" name="gallery" class="product__gallery__selector"/>
+              <img class="product__gallery__img" src="assets/products/2/product.webp" alt=""/>
+              <label for="img-2" class="product__gallery__thumb"><img src="assets/products/2/product.webp" alt=""/></label>
+            </div>
+            <div class="product__gallery__item">
+              <input type="radio" id="img-3" name="gallery" class="product__gallery__selector"/>
+              <img class="product__gallery__img" src="assets/products/3/product.webp" alt=""/>
+              <label for="img-3" class="product__gallery__thumb"><img src="assets/products/3/product.webp" alt=""/></label>
+            </div>
+            <div class="product__gallery__item">
+              <input type="radio" id="img-4" name="gallery" class="product__gallery__selector"/>
+              <img class="product__gallery__img" src="assets/products/4/product.webp" alt=""/>
+              <label for="img-4" class="product__gallery__thumb"><img src="assets/products/4/product.webp" alt=""/></label>
+            </div>
           </div>
         </div>
-
         <div class="col-lg-4 product_card">
-            <div class="product_card__header">
-              <h2>Product Name</h2>
-              <h5>Product Price €</h5>
+          <div class="product_card__container--column">
+            <h4>Block Nomad Sofa</h4>
+            <h6>$1595+ Free Shipping</h6>
+          </div>
+          <div>
+            <h6>Product Colors</h6>
+            <div class="product_card__container">
+              <div class="icon color_icon color_icon--blue"></div>
+              <div class="icon color_icon color_icon--green"></div>
+              <div class="icon color_icon color_icon--black"></div>
+              <div class="icon color_icon color_icon--red"></div>
+              <div class="icon color_icon color_icon--green"></div>
+              <div class="icon color_icon color_icon--black"></div>
             </div>
-            <div class="product_card__body">
-
-              <h6>Product Color</h6>
-              <div class="product_colors">
-                <button class="color_icon color_icon--blue active"></button>
-                <button class="color_icon color_icon--green"></button>
-                <button class="color_icon color_icon--red"></button>
-                <button class="color_icon color_icon--green"></button>
-                <button class="color_icon color_icon--black"></button>
-                <button class="color_icon color_icon--black"></button>
+            <div class="product_card__container">
+              <div class="product_card__container--column">
+                <h6>Arm Style</h6>
+                <div class="product_card__container">
+                  <svg height="40" width="20">
+                    <rect x="0" y="0" height="40" width="20" rx="5" ry="5" fill="darkgray" stroke="gray" stroke-width="2px"/>
+                  </svg>
+                  <svg height="40" width="20">
+                    <rect x="0" y="0" height="40" width="20" rx="25" ry="5" fill="darkgray" stroke="gray" stroke-width="2px"/>
+                  </svg>
+                </div>
               </div>
-
-              <div class="product-style">
-                <h6>Style</h6>
+              <div class="product_card__container--column">
+                <h6>Flip Back Cushions</h6>
+                <div class="product_card__container">
+                  <svg height="20" width="40">
+                    <rect x="0" y="0" height="20" width="40" rx="5" ry="5" fill="darkgray" stroke="gray" stroke-width="2px"/>
+                  </svg>
+                  <svg height="20" width="40">
+                    <rect x="0" y="0" height="20" width="40" fill="darkgray" stroke="gray" stroke-width="2px"/>
+                  </svg>
+                </div>
               </div>
-
             </div>
-  
+            <div class="product_card__container--column">
+              <div class="checkbox"><input type="checkbox"><span class="text_smaller">Moveable chaise + $495</span></div>
+              <div class="checkbox"><input type="checkbox"><span class="text_smaller">Ottoman + $345</span></div>
+              <div class="checkbox"><input type="checkbox"><span class="text_smaller">Lumbar Pillows + $135</span></div>
+              <div class="checkbox"><input type="checkbox"><span class="text_smaller">Sleep Kit + $295</span></div>
+            </div> 
+          </div>
+          <div class="product_card__container--column">
+            <button class="btn btn_warning">ADD TO CART</button>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-    
+    <section class="container">
+      <div class="row dimensions_screen">
+        <div class="col-lg-12 product__title">
+          <h4>Product Dimensions</h4>
+        </div>
+        <div class="col-lg-6">
+          <div class="dimensions_screen__table">
+            <div class="dimensions_screen__table__cell">
+              <span>General Dimensions</span>
+              <span>86" L x 61" D x 33" H</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Seat Height</span>
+              <span>17"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Arm Height</span>
+              <span>23"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Chaise Lenght</span>
+              <span>13"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Seat Depth</span>
+              <span>134"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Chaise Seat Depth</span>
+              <span>11"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Leg Height</span>
+              <span>7"</span>
+            </div>
+            <hr>
+            <div class="dimensions_screen__table__cell">
+              <span>Ottoman Dimensions</span>
+              <span>26" L x 26" W x 17" H</span>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/product-dimensions.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row about_screen">
+        <div class="col-lg-12 product__title">
+          <h4>About This Piece</h4>
+        </div>
+        <div class="col-lg-12">
+          <p>The ideal three-seat sofa featuring one seat with a chaise lounge addition, one seat with an ottoman, and one seat for the chiropractor who loves to sit upright with their feet on the floor. Like everything we make, our modular design is incredibly easy to move and packed with all the clever, life-changing features you expect from Burrow, starting with a built-in USB charger.</p>
+        </div>
+        <div class="col-lg-5 container--column">
+          <h6>Customizable</h4>
+          <p class="text_smaller">Create your ideal sectional sofa with five fabric colors, six leg finishes, and three armrest heights. You can even swap the reversible back cushions: one side is tufted for a classic look, the other smooth and contemporary.</p>
+        </div>
+        <div class="col-lg-5 container--column">
+          <h6>Adaptable</h4>
+          <p class="text_smaller">Rest easy with the knowledge that your new furniture can grow and expand with your life, thanks to the universal, modular design of our Nomad Collection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-12 product__title">
+          <h4>Key Features</h4>
+        </div>
+        <div class="col-lg-12 features_screen">
+          <img src="assets/product-icon1.png" alt="">
+          <img src="assets/product-icon2.png" alt="">
+          <img src="assets/product-icon3.png" alt="">
+          <img src="assets/product-icon4.png" alt="">
+          <img src="assets/product-icon5.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <video src="assets/product-video-1.mp4" autoplay loop></video>
+        </div>
+        <div class="col-lg-6 container--column">
+          <h3>Durable enough for everyday drama</h3>
+          <p>Each and every component of our furniture is selected for durability, from the galvanized steel latches to the precision-milled Baltic Birch frame. The fabric is inherently scratch-resistant, thanks to an incredibly tight weave, which makes it perfect for pets and their parents.</p>
+          <div class="container--flex">
+            <div class="container--column">
+              <h6>Low carbon footprint</h6>
+              <span class="text_small">Fabric made from upcycled materials</span>
+            </div>
+            <div class="container--column">
+              <h6>Sustainable wood</h6>
+              <span class="text_small">Sourced from responsibly managed forests</span>
+            </div>
+          </div> 
+        </div>
+
+        <div class="col-lg-6 container--column">
+          <h3>Don't sweat the pills</h3>
+          <p>Our olefin fabric is stain-resistant thanks to a deep dyeing process that colors each individual strand to the core, as opposed to other fibers that have little pores that absorb stains. You can even spray spills with a water and bleach solution (yes, we said bleach) and blot it out to clean stains.</p>
+          <div class="container--flex">
+            <div class="container--column">
+              <h6>Non toxic</h6>
+              <span class="text_small">Zero chemical additives or treatments</span>
+            </div>
+            <div class="">
+              <h6>Zero PFCs</h6>
+              <span class="text_small">Fabric free of dangerous formaldehydes</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <video src="assets/product-video-2.mp4" autoplay loop></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Here's what else our designers recommend</h4>
+        </div>
+        <div class="row category__products">
+          <div class="col-lg-4 card">
+            <a href="product-page.html">
+              <div class="card_header">
+                <img class="rollover" src="assets/products/1/product-hover.webp"/>
+                <img src="assets/products/1/product.webp"/>
+              </div>
+              <div class="card_label">
+                <h6>Nomad Sofa</h6>
+                <span>$1595 or as low as $100/mo</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 card">
+            <a href="">
+              <div class="card_header">
+                <img class="rollover" src="assets/products/2/product-hover.webp"/>
+                <img src="assets/products/2/product.webp"/>
+              </div>
+              <div class="card_label">
+                <h6>Nomad Sofa</h6>
+                <span>$1595 or as low as $100/mo</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 card">
+            <a href="">
+              <div class="card_header">
+                <img class="rollover" src="assets/products/3/product-hover.webp"/>
+                <img src="assets/products/3/product.webp"/>
+              </div>
+              <div class="card_label">
+                <h6>Nomad Sofa</h6>
+                <span>$1595 or as low as $100/mo</span>
+              </div>
+            </a>
+          </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
